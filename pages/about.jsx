@@ -44,7 +44,7 @@ function about() {
         </div>
         <div className="contact-footer-right contact-ds">
           <AiOutlineCheckCircle className="w-100" />
-          <p className="contact-footer-text">THANH TOÁN KHI NHẬN HÀNG</p>
+          <p className="contact-footer-text">THANH TOÁN NHANH GỌN</p>
         </div>
       </div>
     </div>

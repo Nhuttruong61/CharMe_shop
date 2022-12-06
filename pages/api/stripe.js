@@ -6,12 +6,12 @@ export default async function handler(req, res) {
   // handle the post request
   if (req.method === "POST") {
     try {
-      // Create Checkout Sessions from body params.
+      // .
       const params = {
         submit_type: "pay",
         mode: "payment",
         payment_method_types: ["card"],
-        billing_address_collection: "auto",
+        billing_address_collection: "required",
         shipping_options: [
           { shipping_rate: "shr_1M6uQEBvA6pm59KfiepLR3n8" },
           { shipping_rate: "shr_1M6uWRBvA6pm59Kfsmv3KFFR" },
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
             .replace("-webp", ".webp");
           return {
             price_data: {
-              currency: "vnd",
+              currency: "VND",
               product_data: {
                 name: item.name,
                 images: [newImage],
