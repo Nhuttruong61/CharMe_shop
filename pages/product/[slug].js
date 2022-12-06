@@ -73,7 +73,7 @@ const ProductDetails = ({ product, products }) => {
               className="add-to-cart"
               onClick={() => handleOnAdd(product, qty)}
             >
-              Thêm Vào Giỏ
+              Thêm Vào Giỏ Hàng
             </button>
             <button type="button" className="buy-now" onClick={handleBuyNow}>
               Mua Ngay

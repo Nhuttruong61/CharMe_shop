@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+
+
 import {
   AiOutlineShopping,
   AiOutlineSearch,
@@ -13,6 +14,8 @@ import { client, urlFor } from "../lib/client";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
+  
+  
   const router = useRouter();
   const { showCart, setShowCart, totalQuantities } = useStateContext();
   const [query, setQuery] = useState(null);
@@ -62,7 +65,7 @@ const Navbar = () => {
         </Link>
         <Link href="/news">
           <a className="nav-item">
-            <li>Tin tức</li>
+            <li>Sản Phẩm Mới</li>
           </a>
         </Link>
         <Link href="/about">
@@ -71,15 +74,8 @@ const Navbar = () => {
           </a>
         </Link>
       </ul>
-      <div className="user">
-       <Link href="/login">
-       <a href="" className="login" style={{padding:"0 6px"}}>Đăng Nhập</a>
-       </Link>
-       <Link href="/register">
-        <a href="" className="register" style={{padding:"0 12px"}}>Đăng Ký</a>
-       </Link>
-      </div>
-      <div className="input-wrapper" style={{ position: "relative" }}>
+
+      <div className="input-wrapper" style={{ position: "relative"}}>
         <form className="input-group">
           <input
             type="search"
@@ -98,10 +94,12 @@ const Navbar = () => {
             style={{
               position: "absolute",
               zIndex: 10,
-              width: "100%",
+              width: "110%",
               backgroundColor: "white",
               borderRadius: "10px",
               border: "1px solid #ebebeb",
+              maxHeight:"50vh",
+              overflowY: 'scroll',
             }}
             onMouseOver={() => setIsSearchHover(true)}
             onMouseLeave={() => setIsSearchHover(false)}
@@ -118,11 +116,12 @@ const Navbar = () => {
                     backgroundColor: "transparent",
                   }}
                 >
-                  <div style={{ display: "flex", marginTop: "10px" }}>
+                  <div style={{ display: "flex", marginTop: "10px", justifyContent:"space-between", alignItems:"center"}}>
                     <img
                       src={urlFor(item.image[0])}
                       width={100}
                       height={100}
+
                       className="product-image"
                     />
                     <p
@@ -135,13 +134,15 @@ const Navbar = () => {
                   </div>
                   <h4
                     style={{
+                      display: "flex",
+                      flexDirection:"row-reverse",
                       color: "black",
-                      marginLeft: "100px",
                       top: "50%",
                       transform: " translateY(-150%)",
+                      
                     }}
                   >
-                    d{item.price}
+                    {item.price} VND
                   </h4>
                 </div>
               );

@@ -9,14 +9,17 @@ const Home = ({ products, bannerData }) => {
       {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]} /> */}
       <div className="products-heading" key={products._id}>
         <h2>Sản Phẩm</h2>
+        {console.log(products)}
       </div>
 
       <div className="products-container">
         {products?.map((product) => (
           <>
             <Product key={product._id} product={product} />
+           
           </>
         ))}
+        
       </div>
     </>
   );
