@@ -33,7 +33,7 @@ export const StateContext = ({ children }) => {
       product.quantity = quantity;
       setCartItems([...cartItems, { ...product }]);
     }
-    toast.success(`${qty} ${product.name} added to the cart.`);
+    toast.success(`${qty} ${product.name} thêm vào giỏ hàng.`);
   };
   const handleRemove = (product) => {
     foundProduct = cartItems.find((item) => item._id === product._id);
@@ -47,7 +47,7 @@ export const StateContext = ({ children }) => {
       (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity
     );
     setCartItems(newCartItems);
-    toast.error(`${qty} ${product.name} remove from the cart.`);
+    toast.error(`${qty} ${product.name} xóa khỏi giỏ hàng.`);
   };
   const toggleCartItemQuantity = (id, value) => {
     foundProduct = cartItems.find((item) => item._id === id);
