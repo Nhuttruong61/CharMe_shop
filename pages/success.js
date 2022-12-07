@@ -19,17 +19,17 @@ const Success = () => {
         <p className="icon">
           <BsBagCheckFill />
         </p>
-        <h2>Thank you for your order!</h2>
-        <p className="email-msg">Check your email inbox for the receipt.</p>
+        <h2>Cảm Ơn Bạn Đã Đặt Hàng!</h2>
+        <p className="email-msg">Kiểm tra hộp thư đến email của bạn để nhận biên lai.</p>
         <p className="description">
-          If you have any questions, please email
+          Nếu có câu hỏi, xin liên hệ email
           <a className="email" href="mailto:order@example.com">
-            order@example.com
+            order@gmail.com
           </a>
         </p>
         <Link href="/">
           <button type="button" className="btn">
-            Continue Shopping
+            tiếp tục mua hàng
           </button>
         </Link>
       </div>

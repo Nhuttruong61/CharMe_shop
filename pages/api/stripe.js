@@ -11,6 +11,9 @@ export default async function handler(req, res) {
         submit_type: "pay",
         mode: "payment",
         payment_method_types: ["card"],
+        phone_number_collection: {
+          "enabled": true
+        },
         billing_address_collection: "required",
         shipping_options: [
           { shipping_rate: "shr_1M6uQEBvA6pm59KfiepLR3n8" },

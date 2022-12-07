@@ -9,9 +9,9 @@ const Footer = () => {
     <div className="footer-container">
       <p>2022 CharMe Sự Lựa Chọn Hoàn Hảo.</p>
       <p className="icons">
-        <AiFillFacebook />
-        <AiFillInstagram />
-        <AiOutlineTwitter />
+        <AiFillFacebook style={{cursor:"pointer"}}/>
+        <AiFillInstagram style={{cursor:"pointer"}}/>
+        <AiOutlineTwitter style={{cursor:"pointer"}}/>
       </p>
     </div>
   );
